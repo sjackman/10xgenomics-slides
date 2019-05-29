@@ -291,26 +291,28 @@ Linked reads permit cost-effective assembly of large genomes using high-throughp
 
 ----------------------------------------
 
-![Physlr map of a plastid genome (120 kbp)](images/physlr-plastid.png)
+![Physlr contig of the Sitka spruce plastid (120 kbp)](images/physlr-plastid.png)
 
 ----------------------------------------
 
-![Physlr map of fruit fly chr4 (1.35 Mbp)](images/physlr-flychr4.png)
+![Physlr contigs of fruit fly chr4 (1.35 Mbp)](images/physlr-flychr4.png)
 
 ----------------------------------------
 
-![Physlr map of fruit fly (7 chromosomes, 138 Mbp)](images/physlr-fly.png)
+![Physlr contigs of fruit fly (138 Mbp)](images/physlr-fly.png)
 
 ----------------------------------------
 
-![Physlr map of zebrafish (25 chromosomes, 1.35 Gbp)](images/physlr-zebrafish.png)
+![Physlr contigs of zebrafish (1.35 Gbp)](images/physlr-zebrafish.png)
 
-## Our Dance Card
+----------------------------------------
 
-### Human (3 Gbp)
+![Physlr contigs of human (3.09 Gbp)](images/physlr-human.png)
+
+## Scaling Up to Larger Genomes
+
 ### Western redcedar (12 Gbp)
 ### Sitka spruce (20 Gbp)
-### White spruce (20 Gbp)
 
 ----------------------------------------
 
