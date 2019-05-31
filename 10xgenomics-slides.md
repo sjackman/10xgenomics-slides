@@ -283,36 +283,110 @@ Linked reads permit cost-effective assembly of large genomes using high-throughp
 8. **Genome assembly of western redcedar**
 9. Conclusion
 
-## Physlr
+----------------------------------------
 
-### Physical Maps of Linked Reads
+**Think of each molecule of linked reads as a long read.**
 
-![Traditional physical map of cosmids](images/physical-map.png)
+Can we assemble the molecules using \
+an overlap-layout-consensus approach \
+without first assembling the reads?
+
+----------------------------------------
+
+![Physical Map of Linked Read Molecules](images/physlr-logo.png)
+
+## Approach
+
+- Inspired by overlap-layout-consensus assembly
+- Each barcode of linked reads is a bag of *k*-mers
+- Keep only the minimizers of each read for efficiency
+- Reduce a hundred *k*-mers per read to five minimizers
+- Discard most frequent minimizers, likely repetitive
+- Compare all pairs of barcodes
+- Count shared minimizers per pair of barcodes
+
+## Barcode Overlap Graph
+
+- Each barcode is a vertex
+- Each edge is the overlap between two barcodes
+- Edge weight is number of shared minimizers
 
 ----------------------------------------
 
 ![Physlr contig of the Sitka spruce plastid (120 kbp)](images/physlr-plastid.png)
 
-----------------------------------------
+## Separate Molecules
 
-![Physlr contigs of fruit fly chr4 (1.35 Mbp)](images/physlr-flychr4.png)
-
-----------------------------------------
-
-![Physlr contigs of fruit fly (138 Mbp)](images/physlr-fly.png)
-
-----------------------------------------
-
-![Physlr contigs of zebrafish (1.35 Gbp)](images/physlr-zebrafish.png)
+- We have the barcode overlap graph
+- We want the molecule overlap graph
+- Separate each barcode into its component molecules
+- Look at the neighborhood graph of each barcode \
+  (vertex-induced subgraph of its immediate neighbors)
+- Each connected component (or community) is one molecule
 
 ----------------------------------------
 
-![Physlr contigs of human (3.09 Gbp)](images/physlr-human.png)
+![Neighborhood graph of one barcode with two molecules](images/physlr-molecules.png)
+
+## Layout
+
+- A layout is a linear ordering of molecules
+- Find a path through the molecule overlap graph
+- Solve the traveling salesman problem
+- Optimal solution is NP-hard
+- Approximate solution is good enough
+- Start with a maximum spanning tree (MST)
+
+----------------------------------------
+
+![Maximum spanning tree of fruit fly chr4 (1.35 Mbp)](images/physlr-mst.png)
+
+## Maximum Spanning Tree (MST)
+
+- Compute the maximum spanning tree
+- Prune short branches of the MST
+- Assemble contigs from simple non-branching paths
+- Inspired by MSTmap used for genetic linkage maps
+
+<br>
+
+MSTmap: Efficient and Accurate Construction of Genetic Linkage Maps from the Minimum Spanning Tree of a Graph \
+Wu *et. al* (2018) <https://doi.org/d4sqs8>
+
+----------------------------------------
+
+![Physlr physical map of fruit fly (138 Mbp)](images/physlr-fly.png)
+
+----------------------------------------
+
+![Zebrafish (1.35 Gbp)](images/physlr-zebrafish.png)
+
+10.0 Mbp NG50, 25 chromosomes in 84 contigs \
+4.8 Mbp NG50 for Supernova
+
+----------------------------------------
+
+![Human (3.09 Gbp)](images/physlr-human.png)
+
+23.8 Mbp NG50, 23 chromosomes in 78 contigs \
+38.5 Mbp NG50 for Supernova 
 
 ## Scaling Up to Larger Genomes
 
 ### Western redcedar (12 Gbp)
 ### Sitka spruce (20 Gbp)
+
+## Physlr Conclusions
+
+We can construct a physical map of linked-read molecules \
+without first assembling the reads.
+
+### Applications
+
+- Scaffold by mapping contigs to the physical map
+- Separate the reads of a barcode into molecules
+- Targeted assembly of a chromosome, or a smaller region
+- Assemble a genome using multiple targeted assemblies
 
 ----------------------------------------
 
@@ -321,6 +395,10 @@ Linked reads permit cost-effective assembly of large genomes using high-throughp
 ## fin
 
 ## Supplemental Slides
+
+----------------------------------------
+
+![Physlr contig of fruit fly chr4 (1.35 Mbp)](images/physlr-flychr4.png)
 
 ## First-author Publications
 
