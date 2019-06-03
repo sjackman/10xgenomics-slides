@@ -396,6 +396,14 @@ without first assembling the reads.
 
 ## Supplemental Slides
 
+## Physlr Run Time
+
+| ![Run time](images/physlr-time.png)
+
+## Physlr Memory Usage
+
+| ![Memory usage](images/physlr-memory.png)
+
 ----------------------------------------
 
 ![Physlr contig of fruit fly chr4 (1.35 Mbp)](images/physlr-flychr4.png)
