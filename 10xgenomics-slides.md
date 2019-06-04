@@ -19,6 +19,10 @@ slideNumber: true
 [github.com/sjackman]: https://github.com/sjackman
 [sjackman.ca]: http://sjackman.ca
 
+------------------------------------------------------------
+
+![Dr. Shaun Jackman](images/DrShaunJackman.jpg){height=500px}
+
 ## Efficient Assembly<br>of Large Genomes
 
 1. Introduction
@@ -66,10 +70,9 @@ slideNumber: true
 
 ## Publications
 
-- Five first-author (or joint) papers
+- Five first-author (or joint) papers published \
+  and one manuscript submitted
 - One paper each year from 2015 through 2019
-- One first-author manuscript submitted \
-  (Sitka spruce mitochondrion)
 - Collaborated on 32 papers since 2009
 - 28 papers with at least 10 citations
 - ABySS has been cited over 2,700 times!
@@ -146,7 +149,7 @@ slideNumber: true
 
 ----------------------------------------
 
-![Human: 42 Mbp NG50 with BioNano optical mapping](images/abyss2-ideogram.png){height=600px}
+![Human: 42 Mbp NG50 with linked reads and BioNano](images/abyss2-ideogram.png){height=600px}
 
 ## ABySS 2.0 Conclusions
 
@@ -277,7 +280,7 @@ Linked reads permit cost-effective assembly of large genomes using high-throughp
 2. **ABySS 2.0** <small>([doi.org/f9x8qp](https://doi.org/f9x8qp))</small>
 3. **Tigmint** <small>([doi.org/cwfh](https://doi.org/cwfh))</small>
 4. UniqTag <small>([doi.org/c3m3](https://doi.org/c3m3))</small>
-5. ORCA <small>([doi.org/c4mw](https://doi.org/c4mw))<br>in press</small>
+5. ORCA <small>([doi.org/c4mw](https://doi.org/c4mw))</small>
 6. Organellar genomes of white spruce <small>([doi.org/f8bxck](https://doi.org/f8bxck))</small>
 7. Mitochondrial genome of Sitka spruce <small>([doi.org/c4mv](http://doi.org/c4mv))<br>submitted</small>
 8. **Genome assembly of western redcedar**
@@ -287,7 +290,7 @@ Linked reads permit cost-effective assembly of large genomes using high-throughp
 
 **Think of each molecule of linked reads as a long read.**
 
-Can we assemble the molecules using \
+Can we assemble these molecules using \
 an overlap-layout-consensus approach \
 without first assembling the reads?
 
@@ -295,14 +298,12 @@ without first assembling the reads?
 
 ![Physical Map of Linked Read Molecules](images/physlr-logo.png)
 
-## Approach
+## **Overlap** Layout Consensus
 
-- Inspired by overlap-layout-consensus assembly
 - Each barcode of linked reads is a bag of *k*-mers
 - Keep only the minimizers of each read for efficiency
 - Reduce a hundred *k*-mers per read to five minimizers
 - Discard most frequent minimizers, likely repetitive
-- Compare all pairs of barcodes
 - Count shared minimizers per pair of barcodes
 
 ## Barcode Overlap Graph
@@ -317,18 +318,18 @@ without first assembling the reads?
 
 ## Separate Molecules
 
-- We have the barcode overlap graph
-- We want the molecule overlap graph
+- We have the barcode overlap graph \
+  but we want the molecule overlap graph
 - Separate each barcode into its component molecules
 - Look at the neighborhood graph of each barcode \
   (vertex-induced subgraph of its immediate neighbors)
-- Each connected component (or community) is one molecule
+- Each community is one molecule
 
 ----------------------------------------
 
 ![Neighborhood graph of one barcode with two molecules](images/physlr-molecules.png)
 
-## Layout
+## Overlap **Layout** Consensus
 
 - A layout is a linear ordering of molecules
 - Find a path through the molecule overlap graph
@@ -339,7 +340,7 @@ without first assembling the reads?
 
 ----------------------------------------
 
-![Maximum spanning tree of fruit fly chr4 (1.35 Mbp)](images/physlr-mst.png)
+![Maximum spanning tree of fruit fly chr4 (1.35 Mbp)](images/physlr-mst.png){height=400px}
 
 ## Maximum Spanning Tree (MST)
 
@@ -376,25 +377,23 @@ Wu *et. al* (2018) <https://doi.org/d4sqs8>
 ### Western redcedar (12 Gbp)
 ### Sitka spruce (20 Gbp)
 
-## Physlr Conclusions
-
-We can construct a physical map of linked-read molecules \
-without first assembling the reads.
-
-### Applications
+## Overlap Layout **Consensus**
 
 - Scaffold by mapping contigs to the physical map
-- Separate the reads of a barcode into molecules
 - Targeted assembly of a chromosome, or a smaller region
-- Assemble a genome using multiple targeted assemblies
+- Assemble the complete genome using multiple targeted assemblies
 
 ----------------------------------------
 
-[![Google Scholar profile of Shaun Jackman](images/google-scholar-20190318.png){height=650px}](https://scholar.google.ca/citations?user=wFl3qXAAAAAJ)
+![Vancouver, Canada](images/vancouver.jpg)
 
 ## fin
 
 ## Supplemental Slides
+
+----------------------------------------
+
+[![Google Scholar profile of Shaun Jackman](images/google-scholar-20190318.png){height=650px}](https://scholar.google.ca/citations?user=wFl3qXAAAAAJ)
 
 ## Physlr Run Time
 
