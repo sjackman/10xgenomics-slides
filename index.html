@@ -46,6 +46,12 @@
 <a href="https://twitter.com/sjackman">@sjackman</a> · <a href="https://github.com/sjackman">github.com/sjackman</a> · <a href="http://sjackman.ca">sjackman.ca</a></div>
 <p><a href="http://sjackman.ca"><img data-src="images/sjackman.jpg" alt="Photo" /></a></p>
 </section>
+<section class="slide level2">
+
+<figure>
+<img data-src="images/DrShaunJackman.jpg" alt="Dr. Shaun Jackman" height="500" /><figcaption>Dr. Shaun Jackman</figcaption>
+</figure>
+</section>
 <section id="efficient-assembly-of-large-genomes" class="slide level2">
 <h2>Efficient Assembly<br>of Large Genomes</h2>
 <ol type="1">
@@ -95,10 +101,9 @@ Submitted<br />
 <section id="publications" class="slide level2">
 <h2>Publications</h2>
 <ul>
-<li>Five first-author (or joint) papers</li>
+<li>Five first-author (or joint) papers published<br />
+and one manuscript submitted</li>
 <li>One paper each year from 2015 through 2019</li>
-<li>One first-author manuscript submitted<br />
-(Sitka spruce mitochondrion)</li>
 <li>Collaborated on 32 papers since 2009</li>
 <li>28 papers with at least 10 citations</li>
 <li>ABySS has been cited over 2,700 times!</li>
@@ -208,7 +213,7 @@ usage of ABySS by ten fold.</div>
 <section class="slide level2">
 
 <figure>
-<img data-src="images/abyss2-ideogram.png" alt="Human: 42 Mbp NG50 with BioNano optical mapping" height="600" /><figcaption>Human: 42 Mbp NG50 with BioNano optical mapping</figcaption>
+<img data-src="images/abyss2-ideogram.png" alt="Human: 42 Mbp NG50 with linked reads and BioNano" height="600" /><figcaption>Human: 42 Mbp NG50 with linked reads and BioNano</figcaption>
 </figure>
 </section>
 <section id="abyss-2.0-conclusions" class="slide level2">
@@ -421,7 +426,7 @@ with Chromium reads using <strong>Tigmint</strong></li>
 <li><strong>ABySS 2.0</strong> <small>(<a href="https://doi.org/f9x8qp">doi.org/f9x8qp</a>)</small></li>
 <li><strong>Tigmint</strong> <small>(<a href="https://doi.org/cwfh">doi.org/cwfh</a>)</small></li>
 <li>UniqTag <small>(<a href="https://doi.org/c3m3">doi.org/c3m3</a>)</small></li>
-<li>ORCA <small>(<a href="https://doi.org/c4mw">doi.org/c4mw</a>)<br>in press</small></li>
+<li>ORCA <small>(<a href="https://doi.org/c4mw">doi.org/c4mw</a>)</small></li>
 <li>Organellar genomes of white spruce <small>(<a href="https://doi.org/f8bxck">doi.org/f8bxck</a>)</small></li>
 <li>Mitochondrial genome of Sitka spruce <small>(<a href="http://doi.org/c4mv">doi.org/c4mv</a>)<br>submitted</small></li>
 <li><strong>Genome assembly of western redcedar</strong></li>
@@ -431,7 +436,7 @@ with Chromium reads using <strong>Tigmint</strong></li>
 <section class="slide level2">
 
 <p><strong>Think of each molecule of linked reads as a long read.</strong></p>
-<p>Can we assemble the molecules using<br />
+<p>Can we assemble these molecules using<br />
 an overlap-layout-consensus approach<br />
 without first assembling the reads?</p>
 </section>
@@ -441,15 +446,13 @@ without first assembling the reads?</p>
 <img data-src="images/physlr-logo.png" alt="Physical Map of Linked Read Molecules" /><figcaption>Physical Map of Linked Read Molecules</figcaption>
 </figure>
 </section>
-<section id="approach" class="slide level2">
-<h2>Approach</h2>
+<section id="overlap-layout-consensus" class="slide level2">
+<h2><strong>Overlap</strong> Layout Consensus</h2>
 <ul>
-<li>Inspired by overlap-layout-consensus assembly</li>
 <li>Each barcode of linked reads is a bag of <em>k</em>-mers</li>
 <li>Keep only the minimizers of each read for efficiency</li>
 <li>Reduce a hundred <em>k</em>-mers per read to five minimizers</li>
 <li>Discard most frequent minimizers, likely repetitive</li>
-<li>Compare all pairs of barcodes</li>
 <li>Count shared minimizers per pair of barcodes</li>
 </ul>
 </section>
@@ -470,12 +473,12 @@ without first assembling the reads?</p>
 <section id="separate-molecules" class="slide level2">
 <h2>Separate Molecules</h2>
 <ul>
-<li>We have the barcode overlap graph</li>
-<li>We want the molecule overlap graph</li>
+<li>We have the barcode overlap graph<br />
+but we want the molecule overlap graph</li>
 <li>Separate each barcode into its component molecules</li>
 <li>Look at the neighborhood graph of each barcode<br />
 (vertex-induced subgraph of its immediate neighbors)</li>
-<li>Each connected component (or community) is one molecule</li>
+<li>Each community is one molecule</li>
 </ul>
 </section>
 <section class="slide level2">
@@ -484,8 +487,8 @@ without first assembling the reads?</p>
 <img data-src="images/physlr-molecules.png" alt="Neighborhood graph of one barcode with two molecules" /><figcaption>Neighborhood graph of one barcode with two molecules</figcaption>
 </figure>
 </section>
-<section id="layout" class="slide level2">
-<h2>Layout</h2>
+<section id="overlap-layout-consensus-1" class="slide level2">
+<h2>Overlap <strong>Layout</strong> Consensus</h2>
 <ul>
 <li>A layout is a linear ordering of molecules</li>
 <li>Find a path through the molecule overlap graph</li>
@@ -498,7 +501,7 @@ without first assembling the reads?</p>
 <section class="slide level2">
 
 <figure>
-<img data-src="images/physlr-mst.png" alt="Maximum spanning tree of fruit fly chr4 (1.35 Mbp)" /><figcaption>Maximum spanning tree of fruit fly chr4 (1.35 Mbp)</figcaption>
+<img data-src="images/physlr-mst.png" alt="Maximum spanning tree of fruit fly chr4 (1.35 Mbp)" height="400" /><figcaption>Maximum spanning tree of fruit fly chr4 (1.35 Mbp)</figcaption>
 </figure>
 </section>
 <section id="maximum-spanning-tree-mst" class="slide level2">
@@ -540,27 +543,38 @@ Wu <em>et. al</em> (2018) <a href="https://doi.org/d4sqs8" class="uri">https://d
 <h3 id="western-redcedar-12-gbp">Western redcedar (12 Gbp)</h3>
 <h3 id="sitka-spruce-20-gbp">Sitka spruce (20 Gbp)</h3>
 </section>
-<section id="physlr-conclusions" class="slide level2">
-<h2>Physlr Conclusions</h2>
-<p>We can construct a physical map of linked-read molecules<br />
-without first assembling the reads.</p>
-<h3 id="applications">Applications</h3>
+<section id="overlap-layout-consensus-2" class="slide level2">
+<h2>Overlap Layout <strong>Consensus</strong></h2>
 <ul>
 <li>Scaffold by mapping contigs to the physical map</li>
-<li>Separate the reads of a barcode into molecules</li>
 <li>Targeted assembly of a chromosome, or a smaller region</li>
-<li>Assemble a genome using multiple targeted assemblies</li>
+<li>Assemble the complete genome using multiple targeted assemblies</li>
 </ul>
 </section>
 <section class="slide level2">
 
-<p><a href="https://scholar.google.ca/citations?user=wFl3qXAAAAAJ"><img data-src="images/google-scholar-20190318.png" alt="Google Scholar profile of Shaun Jackman" height="650" /></a></p>
+<figure>
+<img data-src="images/vancouver.jpg" alt="Vancouver, Canada" /><figcaption>Vancouver, Canada</figcaption>
+</figure>
+<p><small>Photo by Martin Krzywinski</small></p>
 </section>
 <section id="fin" class="slide level2">
 <h2>fin</h2>
 </section>
 <section id="supplemental-slides" class="slide level2">
 <h2>Supplemental Slides</h2>
+</section>
+<section class="slide level2">
+
+<p><a href="https://scholar.google.ca/citations?user=wFl3qXAAAAAJ"><img data-src="images/google-scholar-20190318.png" alt="Google Scholar profile of Shaun Jackman" height="650" /></a></p>
+</section>
+<section id="physlr-run-time" class="slide level2">
+<h2>Physlr Run Time</h2>
+<div class="line-block"><img data-src="images/physlr-time.png" alt="Run time" /></div>
+</section>
+<section id="physlr-memory-usage" class="slide level2">
+<h2>Physlr Memory Usage</h2>
+<div class="line-block"><img data-src="images/physlr-memory.png" alt="Memory usage" /></div>
 </section>
 <section class="slide level2">
 
