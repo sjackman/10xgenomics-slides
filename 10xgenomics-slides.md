@@ -387,6 +387,8 @@ Wu *et. al* (2018) <https://doi.org/d4sqs8>
 
 ![Vancouver, Canada](images/vancouver.jpg)
 
+<small>Photo by Martin Krzywinski</small>
+
 ## fin
 
 ## Supplemental Slides
