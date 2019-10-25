@@ -4,11 +4,11 @@
   <meta charset="utf-8">
   <meta name="generator" content="pandoc">
   <meta name="author" content="Shaun Jackman">
-  <meta name="dcterms.date" content="2019-06-04">
   <title>Efficient Assembly of Large Genomes</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="reveal.js/css/reset.css">
   <link rel="stylesheet" href="reveal.js/css/reveal.css">
   <style>
       code{white-space: pre-wrap;}
@@ -35,21 +35,22 @@
 
 <section id="title-slide">
   <h1 class="title">Efficient Assembly of Large Genomes</h1>
-  <p class="subtitle">Presented for 10x Genomics, Pleasanton, California</p>
+  <p class="subtitle">Journal Club, 10x Genomics, Pleasanton, California</p>
   <p class="author">Shaun Jackman</p>
-  <p class="date">2019-06-04</p>
+  <p class="date">2019-Oct-25</p>
 </section>
 
 <section id="shaun-jackman" class="slide level2">
 <h2>Shaun Jackman</h2>
-<div class="line-block"><a href="http://bcgsc.ca">Genome Sciences Centre</a>, BC Cancer, Vancouver, Canada<br />
-<a href="https://twitter.com/sjackman">@sjackman</a> · <a href="https://github.com/sjackman">github.com/sjackman</a> · <a href="http://sjackman.ca">sjackman.ca</a></div>
-<p><a href="http://sjackman.ca"><img data-src="images/sjackman.jpg" alt="Photo" /></a></p>
+<div class="line-block">Computational Biology, 10x Genomics<br />
+Vancouver, Canada<br />
+<a href="https://twitter.com/sjackman">@sjackman</a> · <a href="https://github.com/sjackman">github.com/sjackman</a> · <a href="https://sjackman.ca">sjackman.ca</a></div>
+<p><a href="https://sjackman.ca"><img data-src="images/sjackman.jpg" alt="Photo" /></a></p>
 </section>
 <section class="slide level2">
 
 <figure>
-<img data-src="images/DrShaunJackman.jpg" alt="Dr. Shaun Jackman" height="500" /><figcaption>Dr. Shaun Jackman</figcaption>
+<img data-src="images/DrShaunJackman.jpg" height="500" alt="" /><figcaption>Dr. Shaun Jackman<br>UBC 2019-May-27</figcaption>
 </figure>
 </section>
 <section id="efficient-assembly-of-large-genomes" class="slide level2">
@@ -70,43 +71,42 @@
 
 <div class="columns" style="font-size: 18pt">
 <div class="column">
-<div class="line-block"><strong>Sitka Spruce Mitochondrion</strong><br />
-Submitted<br />
-2019 <a href="https://doi.org/c4mv">doi.org/c4mv</a><br />
-<a href="https://doi.org/10.1101/601104"><img data-src="images/psitchensismt-paper.png" alt="Sitka Spruce Mitochondrion" height="100" /></a><br />
+<div class="line-block"><strong>Tigmint</strong><br />
+<em>BMC Bioinformatics</em><br />
+2018 <a href="https://doi.org/cwfh">doi.org/cwfh</a><br />
+<a href="https://doi.org/10.1186/s12859-018-2425-6"><img data-src="images/Tigmint-BMC.png" height="100" alt="Tigmint" /></a><br />
+<strong>ABySS 2.0</strong><br />
+<em>Genome Research</em><br />
+2017 <a href="https://doi.org/f9x8qp">doi.org/f9x8qp</a><br />
+<a href="https://doi.org/10.1101/gr.214346.116"><img data-src="images/ABySS-2.0-2017.png" height="100" alt="ABySS 2.0" /></a><br />
 <strong>ORCA</strong><br />
 <em>Bioinformatics</em><br />
 2019 <a href="https://doi.org/c4mw">doi.org/c4mw</a><br />
-<a href="https://doi.org/10.1093/bioinformatics/btz278"><img data-src="images/orca-paper.png" alt="ORCA" height="100" /></a><br />
-<strong>Tigmint</strong><br />
-<em>BMC Bioinformatics</em><br />
-2018 <a href="https://doi.org/cwfh">doi.org/cwfh</a><br />
-<a href="https://doi.org/10.1186/s12859-018-2425-6"><img data-src="images/Tigmint-BMC.png" alt="Tigmint" height="100" /></a></div>
+<a href="https://doi.org/10.1093/bioinformatics/btz278"><img data-src="images/orca-paper.png" height="100" alt="ORCA" /></a></div>
 </div><div class="column">
-<div class="line-block"><strong>ABySS 2.0</strong><br />
-<em>Genome Research</em><br />
-2017 <a href="https://doi.org/f9x8qp">doi.org/f9x8qp</a><br />
-<a href="https://doi.org/10.1101/gr.214346.116"><img data-src="images/ABySS-2.0-2017.png" alt="ABySS 2.0" height="100" /></a><br />
+<div class="line-block"><strong>Sitka Spruce Mitochondrion</strong><br />
+<em>bioRxiv</em><br />
+2019 <a href="https://doi.org/c4mv">doi.org/c4mv</a><br />
+<a href="https://doi.org/10.1101/601104"><img data-src="images/psitchensismt-paper.png" height="100" alt="Sitka Spruce Mitochondrion" /></a><br />
 <strong>White Spruce Organelles</strong><br />
 <em>Genome Biology and Evolution</em><br />
 2016 <a href="https://doi.org/f8bxck">doi.org/f8bxck</a><br />
-<a href="https://doi.org/10.1093/gbe/evv244"><img data-src="images/white-spruce-organelles.png" alt="Organellar Genomes of White Spruce" height="100" /></a><br />
+<a href="https://doi.org/10.1093/gbe/evv244"><img data-src="images/white-spruce-organelles.png" height="100" alt="Organellar Genomes of White Spruce" /></a><br />
 <strong>UniqTag</strong><br />
 <em>PLOS ONE</em><br />
 2015 <a href="https://doi.org/c3m3">doi.org/c3m3</a><br />
-<a href="https://doi.org/10.1371/journal.pone.0128026"><img data-src="images/UniqTag-PLOSONE-small.png" alt="UniqTag" height="100" /></a></div>
+<a href="https://doi.org/10.1371/journal.pone.0128026"><img data-src="images/UniqTag-PLOSONE-small.png" height="100" alt="UniqTag" /></a></div>
 </div>
 </div>
 </section>
 <section id="publications" class="slide level2">
 <h2>Publications</h2>
 <ul>
-<li>Five first-author (or joint) papers published<br />
-and one manuscript submitted</li>
+<li>Five first-author (or joint) papers</li>
 <li>One paper each year from 2015 through 2019</li>
 <li>Collaborated on 32 papers since 2009</li>
-<li>28 papers with at least 10 citations</li>
-<li>ABySS has been cited over 2,700 times!</li>
+<li>29 papers with at least 10 citations</li>
+<li>ABySS has been cited over 2,900 times!</li>
 </ul>
 <p><a href="https://scholar.google.ca/citations?user=wFl3qXAAAAAJ&amp;hl=en"><img data-src="images/abyss-citations.png" alt="Citations of ABySS (Google Scholar)" /></a></p>
 </section>
@@ -155,19 +155,19 @@ usage of ABySS by ten fold.</div>
 <section class="slide level2">
 
 <figure>
-<img data-src="images/abyss2-data-structures.png" alt="Memory efficient de Bruijn graph using a Bloom filter Memory usage is independent of k" height="550" /><figcaption>Memory efficient de Bruijn graph using a Bloom filter<br>Memory usage is independent of <em>k</em></figcaption>
+<img data-src="images/abyss2-data-structures.png" height="550" alt="" /><figcaption>Memory efficient de Bruijn graph using a Bloom filter<br>Memory usage is independent of <em>k</em></figcaption>
 </figure>
 </section>
 <section class="slide level2">
 
 <figure>
-<img data-src="images/abyss2-bloom-dbg-nav.png" alt="Navigating a Bloom filter de Bruijn graph" /><figcaption>Navigating a Bloom filter de Bruijn graph</figcaption>
+<img data-src="images/abyss2-bloom-dbg-nav.png" alt="" /><figcaption>Navigating a Bloom filter de Bruijn graph</figcaption>
 </figure>
 </section>
 <section class="slide level2">
 
 <figure>
-<img data-src="images/abyss2-error-correction.png" alt="Sequencing errors and Bloom filter false positives" /><figcaption>Sequencing errors and Bloom filter false positives</figcaption>
+<img data-src="images/abyss2-error-correction.png" alt="" /><figcaption>Sequencing errors and Bloom filter false positives</figcaption>
 </figure>
 </section>
 <section id="spruce-genome-assemblies" class="slide level2">
@@ -213,7 +213,7 @@ usage of ABySS by ten fold.</div>
 <section class="slide level2">
 
 <figure>
-<img data-src="images/abyss2-ideogram.png" alt="Human: 42 Mbp NG50 with linked reads and BioNano" height="600" /><figcaption>Human: 42 Mbp NG50 with linked reads and BioNano</figcaption>
+<img data-src="images/abyss2-ideogram.png" height="600" alt="" /><figcaption>Human: 42 Mbp NG50 with linked reads and BioNano</figcaption>
 </figure>
 </section>
 <section id="abyss-2.0-conclusions" class="slide level2">
@@ -241,7 +241,7 @@ structural variation<br />
 </section>
 <section class="slide level2">
 
-<div class="line-block"><img data-src="images/elephant-puzzle.jpg" alt="Elephant jigsaw puzzle" height="600" /></div>
+<div class="line-block"><img data-src="images/elephant-puzzle.jpg" height="600" alt="Elephant jigsaw puzzle" /></div>
 </section>
 <section class="slide level2">
 
@@ -253,7 +253,7 @@ Scaffold<br />
 </section>
 <section class="slide level2">
 
-<p><a href="https://github.com/bcgsc/tigmint"><img data-src="images/tigmint.png" alt="Tigmint" height="150" /></a></p>
+<p><a href="https://github.com/bcgsc/tigmint"><img data-src="images/tigmint.png" height="150" alt="Tigmint" /></a></p>
 <p><img data-src="images/tigmint-depth.png" height="400" /></p>
 </section>
 <section class="slide level2">
@@ -263,7 +263,7 @@ Scaffold<br />
 </section>
 <section class="slide level2">
 
-<div class="line-block"><img data-src="images/tigmint-metrics-abyss.png" alt="Human genome assembly (GIAB HG004 NA24143)" height="400" /></div>
+<div class="line-block"><img data-src="images/tigmint-metrics-abyss.png" height="400" alt="Human genome assembly (GIAB HG004 NA24143)" /></div>
 <div style="font-size: 18pt">
 <table>
 <thead>
@@ -293,7 +293,7 @@ Scaffold<br />
 <section class="slide level2">
 
 <figure>
-<img data-src="images/tigmint-metrics-sms.png" alt="Corrects and improves long read assemblies too!" /><figcaption>Corrects and improves long read assemblies too!</figcaption>
+<img data-src="images/tigmint-metrics-sms.png" alt="" /><figcaption>Corrects and improves long read assemblies too!</figcaption>
 </figure>
 <table>
 <thead>
@@ -334,11 +334,11 @@ Scaffold<br />
 </section>
 <section id="western-redcedar-thuja-plicata" class="slide level2">
 <h2>Western redcedar (<em>Thuja plicata</em>)</h2>
-<p><img data-src="images/western-redcedar.jpg" alt="Western redcedar (Thuja plicata)" height="500" /> <img data-src="images/western-redcedar-range.png" alt="Range" height="500" /></p>
+<p><img data-src="images/western-redcedar.jpg" height="500" alt="Western redcedar (Thuja plicata)" /> <img data-src="images/western-redcedar-range.png" height="500" alt="Range" /></p>
 </section>
 <section id="western-redcedar-methods" class="slide level2">
 <h2>Western Redcedar Methods</h2>
-<div class="line-block"><img data-src="images/redcedar-flowchart.png" alt="Flowchart of western redcedar methods" height="500" /></div>
+<div class="line-block"><img data-src="images/redcedar-flowchart.png" height="500" alt="Flowchart of western redcedar methods" /></div>
 <aside class="notes">
 <ul>
 <li>Trim adapters with <strong>Trimadap</strong> and <strong>NxTrim</strong></li>
@@ -428,7 +428,7 @@ with Chromium reads using <strong>Tigmint</strong></li>
 <li>UniqTag <small>(<a href="https://doi.org/c3m3">doi.org/c3m3</a>)</small></li>
 <li>ORCA <small>(<a href="https://doi.org/c4mw">doi.org/c4mw</a>)</small></li>
 <li>Organellar genomes of white spruce <small>(<a href="https://doi.org/f8bxck">doi.org/f8bxck</a>)</small></li>
-<li>Mitochondrial genome of Sitka spruce <small>(<a href="http://doi.org/c4mv">doi.org/c4mv</a>)<br>submitted</small></li>
+<li>Mitochondrial genome of Sitka spruce <small>(<a href="https://doi.org/c4mv">doi.org/c4mv</a>)</small></li>
 <li><strong>Genome assembly of western redcedar</strong></li>
 <li>Conclusion</li>
 </ol>
@@ -443,7 +443,7 @@ without first assembling the reads?</p>
 <section class="slide level2">
 
 <figure>
-<img data-src="images/physlr-logo.png" alt="Physical Map of Linked Read Molecules" /><figcaption>Physical Map of Linked Read Molecules</figcaption>
+<img data-src="images/physlr-logo.png" alt="" /><figcaption>Physical Map of Linked Read Molecules</figcaption>
 </figure>
 </section>
 <section id="overlap-layout-consensus" class="slide level2">
@@ -467,7 +467,7 @@ without first assembling the reads?</p>
 <section class="slide level2">
 
 <figure>
-<img data-src="images/physlr-plastid.png" alt="Physlr contig of the Sitka spruce plastid (120 kbp)" /><figcaption>Physlr contig of the Sitka spruce plastid (120 kbp)</figcaption>
+<img data-src="images/physlr-plastid.png" alt="" /><figcaption>Physlr contig of the Sitka spruce plastid (120 kbp)</figcaption>
 </figure>
 </section>
 <section id="separate-molecules" class="slide level2">
@@ -484,7 +484,7 @@ but we want the molecule overlap graph</li>
 <section class="slide level2">
 
 <figure>
-<img data-src="images/physlr-molecules.png" alt="Neighborhood graph of one barcode with two molecules" /><figcaption>Neighborhood graph of one barcode with two molecules</figcaption>
+<img data-src="images/physlr-molecules.png" alt="" /><figcaption>Neighborhood graph of one barcode with two molecules</figcaption>
 </figure>
 </section>
 <section id="overlap-layout-consensus-1" class="slide level2">
@@ -501,7 +501,7 @@ but we want the molecule overlap graph</li>
 <section class="slide level2">
 
 <figure>
-<img data-src="images/physlr-mst.png" alt="Maximum spanning tree of fruit fly chr4 (1.35 Mbp)" height="400" /><figcaption>Maximum spanning tree of fruit fly chr4 (1.35 Mbp)</figcaption>
+<img data-src="images/physlr-mst.png" height="400" alt="" /><figcaption>Maximum spanning tree of fruit fly chr4 (1.35 Mbp)</figcaption>
 </figure>
 </section>
 <section id="maximum-spanning-tree-mst" class="slide level2">
@@ -514,28 +514,28 @@ but we want the molecule overlap graph</li>
 </ul>
 <p><br></p>
 <p>MSTmap: Efficient and Accurate Construction of Genetic Linkage Maps from the Minimum Spanning Tree of a Graph<br />
-Wu <em>et. al</em> (2018) <a href="https://doi.org/d4sqs8" class="uri">https://doi.org/d4sqs8</a></p>
+Wu <em>et. al</em> (2018) <a href="https://doi.org/d4sqs8">doi.org/d4sqs8</a></p>
 </section>
 <section class="slide level2">
 
 <figure>
-<img data-src="images/physlr-fly.png" alt="Physlr physical map of fruit fly (138 Mbp)" /><figcaption>Physlr physical map of fruit fly (138 Mbp)</figcaption>
+<img data-src="images/physlr-fly.png" alt="" /><figcaption>Physlr physical map of fruit fly (138 Mbp)</figcaption>
 </figure>
 </section>
 <section class="slide level2">
 
 <figure>
-<img data-src="images/physlr-zebrafish.png" alt="Zebrafish (1.35 Gbp)" /><figcaption>Zebrafish (1.35 Gbp)</figcaption>
+<img data-src="images/physlr-zebrafish.png" alt="" /><figcaption>Zebrafish (1.35 Gbp)</figcaption>
 </figure>
-<p>10.0 Mbp NG50, 25 chromosomes in 84 contigs<br />
+<p>12.7 Mbp NG50, 25 chromosomes in 144 contigs<br />
 4.8 Mbp NG50 for Supernova</p>
 </section>
 <section class="slide level2">
 
 <figure>
-<img data-src="images/physlr-human.png" alt="Human (3.09 Gbp)" /><figcaption>Human (3.09 Gbp)</figcaption>
+<img data-src="images/physlr-human.png" alt="" /><figcaption>Human (3.09 Gbp)</figcaption>
 </figure>
-<p>23.8 Mbp NG50, 23 chromosomes in 78 contigs<br />
+<p>40.9 Mbp NG50, 23 chromosomes in 95 contigs<br />
 38.5 Mbp NG50 for Supernova</p>
 </section>
 <section id="scaling-up-to-larger-genomes" class="slide level2">
@@ -554,7 +554,7 @@ Wu <em>et. al</em> (2018) <a href="https://doi.org/d4sqs8" class="uri">https://d
 <section class="slide level2">
 
 <figure>
-<img data-src="images/vancouver.jpg" alt="Vancouver, Canada" /><figcaption>Vancouver, Canada</figcaption>
+<img data-src="images/vancouver.jpg" alt="" /><figcaption>Vancouver, Canada</figcaption>
 </figure>
 <p><small>Photo by Martin Krzywinski</small></p>
 </section>
@@ -566,7 +566,7 @@ Wu <em>et. al</em> (2018) <a href="https://doi.org/d4sqs8" class="uri">https://d
 </section>
 <section class="slide level2">
 
-<p><a href="https://scholar.google.ca/citations?user=wFl3qXAAAAAJ"><img data-src="images/google-scholar-20190318.png" alt="Google Scholar profile of Shaun Jackman" height="650" /></a></p>
+<p><a href="https://scholar.google.ca/citations?user=wFl3qXAAAAAJ"><img data-src="images/google-scholar-20190318.png" height="650" alt="Google Scholar profile of Shaun Jackman" /></a></p>
 </section>
 <section id="physlr-run-time" class="slide level2">
 <h2>Physlr Run Time</h2>
@@ -579,7 +579,7 @@ Wu <em>et. al</em> (2018) <a href="https://doi.org/d4sqs8" class="uri">https://d
 <section class="slide level2">
 
 <figure>
-<img data-src="images/physlr-flychr4.png" alt="Physlr contig of fruit fly chr4 (1.35 Mbp)" /><figcaption>Physlr contig of fruit fly chr4 (1.35 Mbp)</figcaption>
+<img data-src="images/physlr-flychr4.png" alt="" /><figcaption>Physlr contig of fruit fly chr4 (1.35 Mbp)</figcaption>
 </figure>
 </section>
 <section id="first-author-publications" class="slide level2">
@@ -588,10 +588,10 @@ Wu <em>et. al</em> (2018) <a href="https://doi.org/d4sqs8" class="uri">https://d
 <ul>
 <li>Largest Complete Mitochondrial Genome of a Gymnosperm, Sitka Spruce (<em>Picea sitchensis</em>), Indicates Complex Physical Structure<br />
 <small> <strong>SD Jackman</strong>, L Coombe, RL Warren, H Kirk, E Trinh, T McLeod, S Pleasance, P Pandoh, Y Zhao, RJ Coope, J Bousquet, J Bohlmann, SJM Jones, I Birol<br />
-(submitted) 2019 </small></li>
+<em>bioRxiv</em> 2019 </small></li>
 <li>ORCA: A Comprehensive Bioinformatics Container Environment for Education and Research<br />
 <small> <strong>SD Jackman</strong>, T Mozgacheva, S Chen, B O’Huiginn, L Bailey, I Birol, SJM Jones<br />
-<em>Bioinformatics</em> 2019 (in press) </small></li>
+<em>Bioinformatics</em> 2019 </small></li>
 <li>Tigmint: correcting assembly errors using linked reads from large molecules<br />
 <small> <strong>SD Jackman</strong>, L Coombe, J Chu, RL Warren, BP Vandervalk, …<br />
 <em>BMC Bioinformatics</em> 2018 </small></li>
@@ -679,13 +679,13 @@ Wu <em>et. al</em> (2018) <a href="https://doi.org/d4sqs8" class="uri">https://d
 <section class="slide level2">
 
 <figure>
-<img data-src="images/abyss2-read-extension.png" alt="Solid reads are extended using the Bloom filter de Bruijn graph to assemble unitigs" /><figcaption>Solid reads are extended using the Bloom filter de Bruijn graph to assemble unitigs</figcaption>
+<img data-src="images/abyss2-read-extension.png" alt="" /><figcaption>Solid reads are extended using the Bloom filter de Bruijn graph to assemble unitigs</figcaption>
 </figure>
 </section>
 <section class="slide level2">
 
 <figure>
-<img data-src="images/abyss2.mem-vs-time.png" alt="ABySS 2.0 reduces memory usage by 10 fold vs ABySS 1.0 for human genome assembly (GIAB HG004 NA24143)" height="550" /><figcaption>ABySS 2.0 reduces memory usage by 10 fold vs ABySS 1.0 for human genome assembly (GIAB HG004 NA24143)</figcaption>
+<img data-src="images/abyss2.mem-vs-time.png" height="550" alt="" /><figcaption>ABySS 2.0 reduces memory usage by 10 fold vs ABySS 1.0 for human genome assembly (GIAB HG004 NA24143)</figcaption>
 </figure>
 </section>
 <section id="spruce-genome-assemblies-1" class="slide level2">
@@ -746,7 +746,7 @@ Wu <em>et. al</em> (2018) <a href="https://doi.org/d4sqs8" class="uri">https://d
 <section class="slide level2">
 
 <figure>
-<img data-src="images/abyss2-metrics.png" alt="Contiguity and correctness are comparable" height="600" /><figcaption>Contiguity and correctness are comparable</figcaption>
+<img data-src="images/abyss2-metrics.png" height="600" alt="" /><figcaption>Contiguity and correctness are comparable</figcaption>
 </figure>
 </section>
 <section id="tools-for-linked-reads" class="slide level2">
@@ -778,7 +778,7 @@ ARCS · Architect · Fragscaff · Scaff10x</div>
 </section>
 <section class="slide level2">
 
-<div class="line-block"><img data-src="images/tigmint-metrics.png" alt="Human genome assemblies (GIAB HG004 NA24143)" height="500" /></div>
+<div class="line-block"><img data-src="images/tigmint-metrics.png" height="500" alt="Human genome assemblies (GIAB HG004 NA24143)" /></div>
 <p>Note: Supernova used only linked reads, others PE+MP+LR.</p>
 </section>
 <section id="tigmint-time-and-memory" class="slide level2">
@@ -798,7 +798,7 @@ ARCS · Architect · Fragscaff · Scaff10x</div>
 <li>9.8 Gbp genome size estimated by GenomeScope</li>
 <li>8.0 Gbp assembled in scaffolds 1 kbp or larger</li>
 </ul>
-<p><a href="http://qb.cshl.edu/genomescope/analysis.php?code=Tt3dme47ZFnwHPqVkqqT"><img data-src="images/redcedar-genomescope.png" alt="GenomeScope results" height="300" /></a></p>
+<p><a href="http://qb.cshl.edu/genomescope/analysis.php?code=Tt3dme47ZFnwHPqVkqqT"><img data-src="images/redcedar-genomescope.png" height="300" alt="GenomeScope results" /></a></p>
 </section>
 <section id="western-redcedar-busco" class="slide level2">
 <h2>Western Redcedar BUSCO</h2>
@@ -812,7 +812,6 @@ ARCS · Architect · Fragscaff · Scaff10x</div>
     </div>
   </div>
 
-  <script src="reveal.js/lib/js/head.min.js"></script>
   <script src="reveal.js/js/reveal.js"></script>
 
   <script>
