@@ -1,27 +1,27 @@
 ---
 title: Efficient Assembly of Large Genomes
-subtitle: Presented for 10x Genomics, Pleasanton, California
+subtitle: Journal Club, 10x Genomics, Pleasanton, California
 author: Shaun Jackman
-date: 2019-06-04
-history: true
+date: 2019-Oct-25
+hash: true
 slideNumber: true
 ---
 
 ## Shaun Jackman
 
-| [Genome Sciences Centre][], BC Cancer, Vancouver, Canada
+| Computational Biology, 10x Genomics
+| Vancouver, Canada
 | [\@sjackman][] &middot; [github.com/sjackman][] &middot; [sjackman.ca][]
 
 [![Photo](images/sjackman.jpg)][sjackman.ca]
 
 [\@sjackman]: https://twitter.com/sjackman
-[Genome Sciences Centre]: http://bcgsc.ca
 [github.com/sjackman]: https://github.com/sjackman
-[sjackman.ca]: http://sjackman.ca
+[sjackman.ca]: https://sjackman.ca
 
 ------------------------------------------------------------
 
-![Dr. Shaun Jackman](images/DrShaunJackman.jpg){height=500px}
+![Dr. Shaun Jackman<br>UBC 2019-May-27](images/DrShaunJackman.jpg){height=500px}
 
 ## Efficient Assembly<br>of Large Genomes
 
@@ -39,24 +39,24 @@ slideNumber: true
 
 ::: {.columns style="font-size: 18pt"}
 :::: column
-| **Sitka Spruce Mitochondrion**
-| Submitted
-| 2019 [doi.org/c4mv](https://doi.org/c4mv)
-| [![Sitka Spruce Mitochondrion](images/psitchensismt-paper.png){height=100px}](https://doi.org/10.1101/601104)
-| **ORCA**
-| *Bioinformatics*
-| 2019 [doi.org/c4mw](https://doi.org/c4mw) 
-| [![ORCA](images/orca-paper.png){height=100px}](https://doi.org/10.1093/bioinformatics/btz278)
 | **Tigmint**
 | *BMC Bioinformatics*
 | 2018 [doi.org/cwfh](https://doi.org/cwfh)
 | [![Tigmint](images/Tigmint-BMC.png){height=100px}](https://doi.org/10.1186/s12859-018-2425-6)
-::::
-:::: column
 | **ABySS 2.0**
 | *Genome Research*
 | 2017 [doi.org/f9x8qp](https://doi.org/f9x8qp)
 | [![ABySS 2.0](images/ABySS-2.0-2017.png){height=100px}](https://doi.org/10.1101/gr.214346.116)
+| **ORCA**
+| *Bioinformatics*
+| 2019 [doi.org/c4mw](https://doi.org/c4mw) 
+| [![ORCA](images/orca-paper.png){height=100px}](https://doi.org/10.1093/bioinformatics/btz278)
+::::
+:::: column
+| **Sitka Spruce Mitochondrion**
+| *bioRxiv*
+| 2019 [doi.org/c4mv](https://doi.org/c4mv)
+| [![Sitka Spruce Mitochondrion](images/psitchensismt-paper.png){height=100px}](https://doi.org/10.1101/601104)
 | **White Spruce Organelles**
 | *Genome Biology and Evolution*
 | 2016 [doi.org/f8bxck](https://doi.org/f8bxck)
@@ -70,12 +70,11 @@ slideNumber: true
 
 ## Publications
 
-- Five first-author (or joint) papers published \
-  and one manuscript submitted
+- Five first-author (or joint) papers
 - One paper each year from 2015 through 2019
 - Collaborated on 32 papers since 2009
-- 28 papers with at least 10 citations
-- ABySS has been cited over 2,700 times!
+- 29 papers with at least 10 citations
+- ABySS has been cited over 2,900 times!
 
 [![Citations of ABySS (Google Scholar)](images/abyss-citations.png)](https://scholar.google.ca/citations?user=wFl3qXAAAAAJ&hl=en)
 
@@ -282,7 +281,7 @@ Linked reads permit cost-effective assembly of large genomes using high-throughp
 4. UniqTag <small>([doi.org/c3m3](https://doi.org/c3m3))</small>
 5. ORCA <small>([doi.org/c4mw](https://doi.org/c4mw))</small>
 6. Organellar genomes of white spruce <small>([doi.org/f8bxck](https://doi.org/f8bxck))</small>
-7. Mitochondrial genome of Sitka spruce <small>([doi.org/c4mv](http://doi.org/c4mv))<br>submitted</small>
+7. Mitochondrial genome of Sitka spruce <small>([doi.org/c4mv](https://doi.org/c4mv))</small>
 8. **Genome assembly of western redcedar**
 9. Conclusion
 
@@ -352,7 +351,7 @@ without first assembling the reads?
 <br>
 
 MSTmap: Efficient and Accurate Construction of Genetic Linkage Maps from the Minimum Spanning Tree of a Graph \
-Wu *et. al* (2018) <https://doi.org/d4sqs8>
+Wu *et. al* (2018) [doi.org/d4sqs8](https://doi.org/d4sqs8)
 
 ----------------------------------------
 
@@ -362,14 +361,14 @@ Wu *et. al* (2018) <https://doi.org/d4sqs8>
 
 ![Zebrafish (1.35 Gbp)](images/physlr-zebrafish.png)
 
-10.0 Mbp NG50, 25 chromosomes in 84 contigs \
+12.7 Mbp NG50, 25 chromosomes in 144 contigs \
 4.8 Mbp NG50 for Supernova
 
 ----------------------------------------
 
 ![Human (3.09 Gbp)](images/physlr-human.png)
 
-23.8 Mbp NG50, 23 chromosomes in 78 contigs \
+40.9 Mbp NG50, 23 chromosomes in 95 contigs \
 38.5 Mbp NG50 for Supernova 
 
 ## Scaling Up to Larger Genomes
@@ -416,12 +415,12 @@ Wu *et. al* (2018) <https://doi.org/d4sqs8>
 - Largest Complete Mitochondrial Genome of a Gymnosperm, Sitka Spruce (*Picea sitchensis*), Indicates Complex Physical Structure \
     <small>
     **SD Jackman**, L Coombe, RL Warren, H Kirk, E Trinh, T McLeod, S Pleasance, P Pandoh, Y Zhao, RJ Coope, J Bousquet, J Bohlmann, SJM Jones, I Birol \
-    (submitted) 2019
+    *bioRxiv* 2019
     </small>
 - ORCA: A Comprehensive Bioinformatics Container Environment for Education and Research \
     <small>
     **SD Jackman**, T Mozgacheva, S Chen, B O'Huiginn, L Bailey, I Birol, SJM Jones \
-    *Bioinformatics* 2019 (in press)
+    *Bioinformatics* 2019
     </small>
 - Tigmint: correcting assembly errors using linked reads from large molecules \
     <small>
