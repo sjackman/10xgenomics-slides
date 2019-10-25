@@ -28,17 +28,17 @@ install-deps:
 	pandoc -st revealjs -V theme:sky --self-contained -o $@ $<
 
 # Download reveal.js
-revealjs-3.7.0.tar.gz:
-	curl -L -o $@ https://github.com/hakimel/reveal.js/archive/3.7.0.tar.gz
+revealjs-3.8.0.tar.gz:
+	curl -L -o $@ https://github.com/hakimel/reveal.js/archive/3.8.0.tar.gz
 
 # Extract reveal.js
-reveal.js-3.7.0/js/reveal.js: revealjs-3.7.0.tar.gz
+reveal.js-3.8.0/js/reveal.js: revealjs-3.8.0.tar.gz
 	tar xf $<
 	touch $@
 
 # Patch reveal.js
-reveal.js/js/reveal.js: reveal.js-3.7.0/js/reveal.js
-	cp -a reveal.js-3.7.0 reveal.js
+reveal.js/js/reveal.js: reveal.js-3.8.0/js/reveal.js
+	cp -a reveal.js-3.8.0 reveal.js
 	sed -i .orig \
 		-e 's/text-transform: uppercase;//' \
 		-e 's/font-size: 40px;/font-size: 34px;/' \
